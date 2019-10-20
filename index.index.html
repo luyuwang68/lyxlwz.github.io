@@ -1,0 +1,38 @@
+<%@page language = "java.sql.*;" %>
+<br>
+<br>
+<%
+try
+{
+  String UserId = request.getParameter("textUserId");
+  String Password = request.getParameter("txtPassword");
+  Class.forName("sun.jdbc.cdbc.JdbcOdbcDriver");
+  Connection con =
+          DriverManager.getConnection("jdbc:odbc:text","sa""sa");
+  PrepareStatement s = con.prepareStatement("Select * from CustomerRegistration 
+                               Where UserId = ? and Password = ?");
+  s.setString(1,UserId);
+  s.setString(2,Password);
+  ResultSet rs = s.executeQuery();
+  boolean flag=rs.next();
+  if(flag)
+  {
+    out.println("<div align=\"center\>
+    <font color =red size =50>大姐生日快乐！！！</font></div>"）
+  }
+  else
+  {
+    out.println(" <div align=\"center\">
+          <font color =red size =50>奔二了！</font></div>")
+  }
+  
+  re.close();
+  s.close();
+  con.close();
+}
+catch(java.sql.SQlException sqle)
+{
+  out.println("<font color = red size = 50>" + aqle.toString()
+                    +"</font>");
+}
+%>
