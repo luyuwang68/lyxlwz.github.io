@@ -1,29 +1,28 @@
 <html>
   <head>
     <title>Loginform</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <style type="text/css">
-      <!--
-      .style1
-      {
-        font-size:2ex;
-        font-weight:bold;
-        color:#FF0000;
-        font-style:italic;
-      }
-      -->
+      #all{ margin:0 auto:padding:0px;}
+      #top{color: red;font-size:100px;text-align: center;margin-bottom:60px; }
+      table{margin-left: 500px; }
+      #top2{text-align： center;padding:10px;background-color:#FF0000}
+      #b input{width 50px:margin: 0 auto;backgroud:#028DEA}
+     
     </style>
   </head>
   <body>
-    <div class="css">
-    <br />
+    <div class="all">
+    <br>
     <form name = "form1" method="post" action = "loginresult.jsp">
-      <div align="center">
-        <span class = "style1">Hello,welcome!</span>
+      <div id="top">
+        <span>Hello,welcome!</span>
       </div>
-      <table border = "0" align= "center">
+      <table>
+        <tbody>
         <tr>
           <td colspan = "3">
-            <div align="center">Administrat</div>
+            <div id="top2">Administrat</div>
            </td>
         </tr>
         <tr>
@@ -43,11 +42,16 @@
         <tr>
           <td>&nbsp;</td>
           <td>
+            <div id="input">
+              <div id="b">
             <input type = "submit" name = "Submit" value ="login">
             <input type="reset" name="Submit2" value="cancel">
+            </div>
+             </div>
           </td>
           <td>&nbsp;</td>
         </tr>
+         </tbody>
      </table>
    </form>
   </div>
